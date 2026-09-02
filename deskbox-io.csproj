@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!--
+    deskbox-io：DeskBox 随记/待办的双向 CLI 接口。
+    零外部依赖（NuGet 被禁用）：只用 .NET 自带库 System.Text.Json。
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>deskbox-io</AssemblyName>
+    <RootNamespace>DeskBoxIo</RootNamespace>
+    <!-- 以下三条：完全离线构建，不去访问 NuGet -->
+    <RestoreSources></RestoreSources>
+    <NuGetAudit>false</NuGetAudit>
+    <RestoreIgnoreFailedSources>true</RestoreIgnoreFailedSources>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Models.cs" />
+    <Compile Include="DeskBoxEnv.cs" />
+    <Compile Include="TodoService.cs" />
+    <Compile Include="NotesService.cs" />
+  </ItemGroup>
+</Project>

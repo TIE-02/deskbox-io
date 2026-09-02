@@ -1,0 +1,13 @@
+# ===== .NET 构建产物（任何人本地 dotnet build 都会生成，不需要提交）=====
+**/bin/
+**/obj/
+*.user
+.vs/
+
+# ===== 本项目特有 =====
+# 离线构建时用的 dotnet 临时目录
+.dotnet-home/
+# 本地数据备份（含真实随记/待办，严禁提交！）
+backups/
+# 发布大文件（70MB 自包含版走 GitHub Release 附件，不进 git）
+publish/
