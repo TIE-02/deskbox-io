@@ -6,6 +6,12 @@ A small, independent command-line tool that lets AI agents (DSH / Codex / Claude
 **read and add** DeskBox widgets' notes and todos by talking to DeskBox's JSON data files directly —
 no modification to DeskBox itself.
 
+### Screenshots / 运行截图
+
+![Agent 对话中调用 deskbox-io](docs/screenshots/1.png)
+
+![DeskBox 中生效的随记与待办](docs/screenshots/2.png)
+
 [English](#english) · [中文](#中文)
 
 ---
