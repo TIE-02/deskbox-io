@@ -38,6 +38,19 @@ dotnet build deskbox-io.csproj
 bin\Debug\net10.0\deskbox-io.exe status
 ```
 
+### Verify your download (SHA-256)
+
+The release `deskbox-io.exe` is **unsigned**, so Windows shows an "unknown publisher" warning — that is normal.
+To make sure the file you downloaded is exactly what was published (not corrupted or tampered with), compare its
+SHA-256 with the one shown on the [Releases](../../releases) page of the version you downloaded:
+
+```powershell
+Get-FileHash .\deskbox-io.exe -Algorithm SHA256
+```
+
+Both values must match. Note: SHA-256 verifies the file is **unchanged since upload**; it does not prove authorship
+(that would require code signing) — always download from the official Releases page over HTTPS.
+
 ### Usage
 
 ```bat
@@ -110,6 +123,18 @@ break — check the release notes before upgrading.
 dotnet build deskbox-io.csproj
 bin\Debug\net10.0\deskbox-io.exe status
 ```
+
+### 校验下载文件（SHA-256）
+
+发布的 `deskbox-io.exe` **未签名**，Windows 会提示"未知发布者"——属正常现象。为确保下载的文件就是你发布
+的那个（未被损坏或篡改），请把本地算出的 SHA-256 与对应版本的 [Releases](../../releases) 页面公布的哈希比对：
+
+```powershell
+Get-FileHash .\deskbox-io.exe -Algorithm SHA256
+```
+
+两者必须一致。注意：SHA-256 只能证明文件**上传后未被改动**，不能证明作者身份（那需要代码签名）——
+请始终通过 HTTPS 从官方 Releases 页面下载。
 
 ### 用法示例
 
